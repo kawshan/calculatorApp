@@ -10,9 +10,10 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private TextView number1;
+     TextView number1;
     private TextView number2;
     private TextView ansView;
+
     private EditText editnum1;
     private EditText editnum2;
     private Button addButton;
@@ -42,6 +43,33 @@ public class MainActivity extends AppCompatActivity {
     }
     public void calculator(View view){
 
+
+        String tag=view.getTag().toString();
+        ansView.setText(tag);
+
+
+        double ans=0;
+        int num1=Integer.parseInt(editnum1.getText().toString());
+        int num2=Integer.parseInt(editnum2.getText().toString());
+
+       switch (tag){
+           case "add":
+               ans=num1+num2;
+               break;
+           case "sub":
+               ans=num1-num2;
+                break;
+           case "mul":
+               ans=num1*num2;
+               break;
+           case "div":
+               ans=num1/num2;
+               break;
+
+       }
+
+
+        ansView.setText(String.valueOf(ans));
 
     }
 //    public void addNum(View view){

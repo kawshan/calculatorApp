@@ -37,6 +37,7 @@
         android:layout_marginStart="1dp"
         android:layout_marginTop="116dp"
         android:onClick="calculator"
+        android:tag="add"
         android:text="ADD"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
@@ -48,6 +49,7 @@
         android:layout_marginStart="12dp"
         android:layout_marginTop="116dp"
         android:onClick="calculator"
+        android:tag="sub"
         android:text="SUB"
         app:layout_constraintStart_toEndOf="@+id/addButton"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
@@ -57,20 +59,24 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="114dp"
         android:onClick="calculator"
+        android:tag="mul"
         android:text="MUL"
         app:layout_constraintStart_toEndOf="@+id/subButton"
-        tools:layout_editor_absoluteY="248dp" />
+        app:layout_constraintTop_toBottomOf="@+id/editnum2" />
 
     <Button
         android:id="@+id/divButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
+        android:layout_marginTop="114dp"
         android:onClick="calculator"
+        android:tag="div"
         android:text="DIV"
         app:layout_constraintStart_toEndOf="@+id/mulButton"
-        tools:layout_editor_absoluteY="248dp" />
+        app:layout_constraintTop_toBottomOf="@+id/editnum2" />
 
     <Button
         android:id="@+id/resetButton"
@@ -80,6 +86,7 @@
         android:layout_marginTop="28dp"
         android:backgroundTint="#F44336"
         android:onClick="resetBtn"
+        android:tag="reset"
         android:text="RESET"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/subButton" />
